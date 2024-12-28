@@ -3,7 +3,14 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import SocialLink from '../sociallink';
-const AccordionItem = ({ title, content, openIndex, index, setOpenIndex }) => {
+const AccordionItem = ({
+    title,
+    content,
+    openIndex,
+    index,
+    setOpenIndex,
+    link,
+}) => {
     const [isOpen, setIsOpen] = useState(openIndex === index);
 
     useEffect(() => {
@@ -35,8 +42,13 @@ const AccordionItem = ({ title, content, openIndex, index, setOpenIndex }) => {
                     isOpen ? 'max-h-96' : 'max-h-0'
                 }`}
             >
-                <div className="py-4 bg-none">{content}</div>
-                <SocialLink name={title + 'Repository'} />
+                <div className="py-4 pr-12 bg-none">{content}</div>
+                <a href={link}>
+                    <SocialLink
+                        hoverScale={false}
+                        name={title + 'Repository'}
+                    />
+                </a>
             </div>
         </div>
     );

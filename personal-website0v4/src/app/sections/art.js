@@ -5,11 +5,11 @@ import EntranceText from '../component/EntranceText';
 const ArtSection = () => {
     return (
         <section className="relative h-screen">
-            <div className="relative z-10">
+            {/* <div className="relative z-10">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-10">
                     Click Me
                 </button>
-            </div>
+            </div> */}
 
             <Image
                 src="/artbg.jpg"

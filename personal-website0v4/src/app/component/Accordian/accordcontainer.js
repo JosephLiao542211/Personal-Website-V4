@@ -8,8 +8,12 @@ export default function Accordion({ items }) {
     return (
         <div className="space-y-2 z-10">
             {items.map((item, index) => (
-                <div key={index} className=" rounded-lg overflow-hidden">
+                <div
+                    key={index}
+                    className="rounded-lg overflow-hidden max-h-[50vh]"
+                >
                     <AccordionItem
+                        link={item.link}
                         title={item.title}
                         content={item.content}
                         openIndex={openIndex} // Use correct casing here
