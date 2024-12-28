@@ -21,7 +21,7 @@ export default function Hero() {
         return date.toLocaleString('en-US', options);
     };
     const { scrollY } = useScroll();
-    const opacity = useTransform(scrollY, [0, 500], [0.23, 0.05]);
+    const opacity = useTransform(scrollY, [0, 500], [0.23, 0.0]);
 
     return (
         <div className="relative bg-background text-foreground">
@@ -29,7 +29,7 @@ export default function Hero() {
             <motion.div style={{ opacity }} className="absolute inset-0 z-0">
                 <Image
                     src="/background.jpg"
-                    layout="fill"
+                    fill={true}
                     objectFit="cover"
                     quality={100}
                     alt="Background Image"
