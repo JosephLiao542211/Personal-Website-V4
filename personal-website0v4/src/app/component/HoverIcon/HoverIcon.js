@@ -8,7 +8,7 @@ const HoverIcon = ({ onClick, label }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onClick}
-            className="absolute bottom-5 right-5 font-regular text-white p-4 rounded-full z-10 hover:bg-green-500 transition-colors"
+            className="absolute bottom-5 right-5 font-regular text-white p-4 rounded-full z-10 hover:bg-blue-500 transition-colors"
         >
             <div className="relative flex items-center justify-center h-20 w-20">
                 <div className="absolute inset-0 flex items-center justify-center text-white font-medium">
