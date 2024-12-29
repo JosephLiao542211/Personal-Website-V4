@@ -65,7 +65,7 @@ export default function Hero() {
                 transition={{ duration: 1 }}
             >
                 <a
-                    href="/resume.pdf"
+                    href="/Joseph_Liao_Resume.pdf"
                     download="Joseph_Liao_Resume.pdf"
                     className="flex items-center space-x-2"
                 >
