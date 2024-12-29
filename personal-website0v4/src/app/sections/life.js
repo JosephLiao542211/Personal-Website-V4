@@ -7,7 +7,7 @@ import EntranceText from '../component/EntranceText';
 const LifeSection = () => {
     const images = [
         '/life3.jpg',
-        '/life.jpg',
+        '/life.JPG',
         '/lif2.jpg',
         '/Summer Pitch 2024 Local Reach.jpg.webp',
         '/bananda.jpg',
