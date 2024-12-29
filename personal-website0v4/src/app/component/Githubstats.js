@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const GithubStats = () => {
     const [languageStats, setLanguageStats] = useState({});
@@ -102,15 +103,17 @@ const GithubStats = () => {
                                 <span className="text-primary font-regular">
                                     {language}
                                 </span>
-                                <span className="text-primary/70">
-                                    {((lines / maxLines) * 100).toFixed(1)}%
-                                </span>
                             </div>
                             <div className="h-2 bg-primary/10 rounded-full overflow-hidden">
-                                <div
+                                <motion.div
                                     className="h-full bg-primary transition-all duration-500 ease-out rounded-full"
-                                    style={{
+                                    initial={{ width: '0%' }}
+                                    whileInView={{
                                         width: `${(lines / maxLines) * 100}%`,
+                                    }}
+                                    transition={{
+                                        duration: 0.5, // Adjust the duration as needed
+                                        ease: 'easeOut',
                                     }}
                                 />
                             </div>
@@ -124,15 +127,17 @@ const GithubStats = () => {
                                 <span className="text-primary font-regular">
                                     {language}
                                 </span>
-                                <span className="text-primary/70">
-                                    {((lines / maxLines) * 100).toFixed(1)}%
-                                </span>
                             </div>
                             <div className="h-2 bg-primary/10 rounded-full overflow-hidden">
-                                <div
+                                <motion.div
                                     className="h-full bg-primary transition-all duration-500 ease-out rounded-full"
-                                    style={{
+                                    initial={{ width: '0%' }}
+                                    whileInView={{
                                         width: `${(lines / maxLines) * 100}%`,
+                                    }}
+                                    transition={{
+                                        duration: 0.5, // Adjust the duration as needed
+                                        ease: 'easeOut',
                                     }}
                                 />
                             </div>

@@ -1,15 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 import EntranceText from '../component/EntranceText';
+import ArtGallery from '../component/artgallery';
 
 const ArtSection = () => {
     return (
         <section className="relative h-screen">
-            {/* <div className="relative z-10">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded z-10">
-                    Click Me
-                </button>
-            </div> */}
+            <div className="absolute bottom-5 right-5 min-w-[800px] max-w-3xl z-10">
+                <p className="text-primary text-sm font-regular text-center">
+                    Explore My Artwork:
+                </p>
+                <ArtGallery></ArtGallery>
+            </div>
 
             <Image
                 src="/artbg.jpg"
