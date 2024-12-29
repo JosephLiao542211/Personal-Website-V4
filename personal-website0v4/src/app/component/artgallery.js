@@ -83,8 +83,12 @@ const ExpandingGallery = () => {
                     <div className="relative w-[400px] h-[600px] flex items-end">
                         {expandedIndex === index && (
                             <div className="absolute justify-between top-5 flex left-0 w-full bg-opacity-50 text-white p-2">
-                                <h3>{item.title}</h3>
-                                <p>{item.date}</p>
+                                <h3 className="font-regular text-sm">
+                                    {item.title}
+                                </h3>
+                                <p className="font-regular text-sm">
+                                    {item.date}
+                                </p>
                             </div>
                         )}
                         <img

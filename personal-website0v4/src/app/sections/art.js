@@ -6,7 +6,7 @@ import ArtGallery from '../component/artgallery';
 const ArtSection = () => {
     return (
         <section className="relative h-screen">
-            <div className="absolute bottom-5 right-5 min-w-[800px] max-w-3xl z-10">
+            <div className="absolute bottom-10 right-5 min-w-[800px] max-w-3xl z-10">
                 <p className="text-primary text-sm font-regular text-center">
                     Explore My Artwork:
                 </p>

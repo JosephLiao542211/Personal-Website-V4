@@ -1,6 +1,7 @@
 import Hero from './sections/hero';
 import ArtSection from './sections/art';
 import TechSection from './sections/tech';
+import LifeSection from './sections/life';
 
 // Home component
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
             <Hero></Hero>
             <TechSection></TechSection>
             <ArtSection></ArtSection>
+            <LifeSection> </LifeSection>
         </div>
     );
 }
