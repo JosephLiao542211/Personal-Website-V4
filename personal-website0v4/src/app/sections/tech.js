@@ -60,7 +60,7 @@ export default function TechSection() {
     return (
         <section className="h-fit relative md:h-screen md:relative">
             <ParticlesComponent></ParticlesComponent>
-            <div className="md:max-w-[60vw] relative mt-36 px-8 z-10 mx-auto md:absolute md:right-5 md:top-1/2 md:mt-0 md:transform md:-translate-y-1/2">
+            <div className=" relative mt-36 px-8 z-10 w-full md:absolute md:max-w-[60vw] md:right-5 md:top-1/2 md:mt-0 md:transform md:-translate-y-1/2">
                 <Accordion items={accordionItems}></Accordion>
             </div>
             <div className=" relative max-w-lg mt-32 pr-[7%] md:absolute bottom-5 left-5">

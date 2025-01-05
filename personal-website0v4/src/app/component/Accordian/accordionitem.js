@@ -51,7 +51,7 @@ const AccordionItem = ({
                     }`}
                 >
                     {title}
-                    <span className="mx-2">
+                    <span className="mx-2 lg:inline hidden">
                         {tags &&
                             tags.map((tag, idx) => (
                                 <span
@@ -63,6 +63,24 @@ const AccordionItem = ({
                                     {tag}
                                 </span>
                             ))}
+                    </span>
+                    <span className="mx-2 inline lg:hidden">
+                        {tags &&
+                            tags.slice(0, 2).map((tag, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`inline-block rounded-full px-3 py-1 text-sm text-gray-700 mr-2 ${
+                                        tagColors[tag] || 'bg-gray-200'
+                                    }`}
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        {tags && tags.length > 3 && (
+                            <span className="inline-block rounded-full px-3 py-1 text-sm text-gray-700 mr-2 bg-gray-200">
+                                +{tags.length - 2}
+                            </span>
+                        )}
                     </span>
                 </span>
 

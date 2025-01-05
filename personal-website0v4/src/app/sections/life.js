@@ -85,7 +85,7 @@ const LifeSection = () => {
                             objectFit="cover"
                             quality={100}
                             alt={`Background Image ${imageIndex + 1}`}
-                            className="opacity-30"
+                            className="opacity-50"
                             priority
                         />
                     </motion.div>
@@ -98,7 +98,7 @@ const LifeSection = () => {
                 transition={{ delay: 0.3 }}
                 className="absolute bottom-5 left-5 z-10"
             >
-                <div className="relative max-w-lg mt-32 pr-[7%] md:absolute bottom-5 left-5">
+                <div className="relative max-w-[50vw] mt-32  md:absolute  bottom-5 ">
                     <EntranceText
                         text="All about my Life. What does it mean to live? For me it means spending it with the people I love doing the things I love."
                         title="Life"
@@ -111,7 +111,7 @@ const LifeSection = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute top-1/4 right-16 bg-opacity-70 p-5 rounded-lg z-10 max-w-md"
+                className="absolute md:top-1/4 md:right-16 bg-opacity-70 p-5 rounded-lg z-100 max-w-md"
             >
                 <div className="flex justify-between">
                     <h2 className="text-md font-regular mb-3">
