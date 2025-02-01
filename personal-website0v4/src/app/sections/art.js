@@ -28,7 +28,7 @@ const ArtSection = () => {
                 objectFit="cover"
                 quality={100}
                 alt="Background Image"
-                className=" opacity-50"
+                className=" opacity-30"
             />
 
             <div className="absolute bottom-5 left-5">

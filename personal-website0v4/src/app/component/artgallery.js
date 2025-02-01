@@ -4,52 +4,52 @@ import React, { useState } from 'react';
 const ExpandingGallery = () => {
     const images = [
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=1',
             title: 'Image 1',
             date: '2023-01-01',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=2',
             title: 'Image 2',
             date: '2023-01-02',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=3',
             title: 'Image 3',
             date: '2023-01-03',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=4',
             title: 'Image 4',
             date: '2023-01-04',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=5',
             title: 'Image 5',
             date: '2023-01-05',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=6',
             title: 'Image 6',
             date: '2023-01-06',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=7',
             title: 'Image 7',
             date: '2023-01-07',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=8',
             title: 'Image 8',
             date: '2023-01-08',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=9',
             title: 'Image 9',
             date: '2023-01-09',
         },
         {
-            src: 'https://via.placeholder.com/400',
+            src: 'https://picsum.photos/400/600?random=10',
             title: 'Image 10',
             date: '2023-01-10',
         },
@@ -71,7 +71,7 @@ const ExpandingGallery = () => {
             {images.map((item, index) => (
                 <div
                     key={index}
-                    className={`flex justify-center items-end h-[600px] overflow-hidden transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                    className={`flex justify-center items-end h-[650px] overflow-hidden transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
                         ${
                             expandedIndex === index
                                 ? 'w-[400px] grow-0 shrink-0'
@@ -80,7 +80,7 @@ const ExpandingGallery = () => {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <div className="relative w-[400px] h-[600px] flex items-end">
+                    <div className="relative w-[400px] h-[80%] flex items-end">
                         {expandedIndex === index && (
                             <div className="absolute justify-between top-5 flex left-0 w-full bg-opacity-50 text-white p-2">
                                 <h3 className="font-regular text-sm">
