@@ -17,10 +17,10 @@ const ParticlesComponent = ({ options = {} }) => {
                 const defaultOptions = {
                     particles: {
                         number: {
-                            value: 80,
+                            value: 200,
                             density: {
                                 enable: true,
-                                value_area: 800,
+                                value_area: 500,
                             },
                         },
                         color: {
@@ -96,7 +96,7 @@ const ParticlesComponent = ({ options = {} }) => {
         <div
             ref={particlesRef}
             id="particles-js"
-            className="absolute inset-0 z-10"
+            className="absolute inset-0 z-9"
         />
     );
 };

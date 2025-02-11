@@ -3,8 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const SocialLink = ({ name, hoverScale = true }) => {
+const SocialLink = ({ name, hoverScale = true, image, url, icon}) => {
     return (
+        <a href={url}>
         <motion.div
             className="flex space-x-1"
             initial={{ y: 100, opacity: 0 }}
@@ -22,16 +23,29 @@ const SocialLink = ({ name, hoverScale = true }) => {
                     : {}
             }
         >
+            {icon && image ? 
+                
+            <img src={image} >
+                {name}
+            </img> 
+
+            :  
+                
             <p className="text-primary text-sm font-regular underline">
                 {name}
             </p>
+            
+            }            
+            
+           
             <Image
-                src="/diagarrow.svg"
+                src={`${image ? image : "/diagarrow.svg"}`}
                 width={10}
                 height={10}
                 alt="LinkedIn Link Arrow"
             />
         </motion.div>
+        </a>
     );
 };
 

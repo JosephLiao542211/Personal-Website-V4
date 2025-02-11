@@ -3,18 +3,22 @@ import Image from 'next/image';
 import EntranceText from '../component/EntranceText';
 import ArtGallery from '../component/artgallery';
 import MobileArtGallery from '../component/mobileartgallery';
+import SocialLink from '../component/sociallink';
 
 const ArtSection = () => {
     return (
         <section className="relative h-screen">
+            {/* Mobile View */}
             <div className="block absolute z-10 md:hidden">
-                <p className="text-primary md:hidden text-sm font-regular my-6 text-center">
+                <p className="text-primary md:hidden text-sm font-regular  text-center">
                     Explore My Artwork:
                 </p>
                 <MobileArtGallery></MobileArtGallery>
             </div>
-            <div className="absolute bottom-10 right-5 min-w-[800px] max-w-3xl z-10">
-                <p className="text-primary hidden md:block text-sm font-regular text-center">
+
+            {/* Computer view */}
+            <div className="absolute right-5 min-w-[800px] max-w-3xl z-10">
+            <p className=" absolute left-1/2 top-[15%] text-primary hidden md:block text-sm font-regular text-center">
                     Explore My Artwork:
                 </p>
                 <div className="hidden md:block">
@@ -31,11 +35,12 @@ const ArtSection = () => {
                 className=" opacity-30"
             />
 
-            <div className="absolute bottom-5 left-5">
+            <div className="absolute bottom-5 left-5 max-w-[25%]">
                 <EntranceText
-                    text="Welcome to the art section of my personal website."
+                    text="Welcome to the art section of my personal website. Feel free to explore some of my artwork! Ive been invloved in visual art since the age of 6, and have explored various mediums."
                     title="Art"
                 ></EntranceText>
+                {/* <SocialLink hoverScale={true} name={'Github'} url={} image={'artbg.jpg'}></SocialLink> */}
             </div>
         </section>
     );

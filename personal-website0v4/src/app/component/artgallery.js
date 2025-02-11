@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-
+import { motion } from 'motion/react';
 const ExpandingGallery = () => {
     const images = [
         {
@@ -71,7 +71,7 @@ const ExpandingGallery = () => {
             {images.map((item, index) => (
                 <div
                     key={index}
-                    className={`flex justify-center items-end h-[650px] overflow-hidden transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
+                    className={`flex justify-center items-end h-screen overflow-hidden transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]
                         ${
                             expandedIndex === index
                                 ? 'w-[400px] grow-0 shrink-0'
@@ -80,21 +80,26 @@ const ExpandingGallery = () => {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <div className="relative w-[400px] h-[80%] flex items-end">
+                    <div className="relative w-[400px] h-[80%] mb-5 flex items-end">
                         {expandedIndex === index && (
-                            <div className="absolute justify-between top-5 flex left-0 w-full bg-opacity-50 text-white p-2">
+                            <motion.div 
+                            initial={{ y: 20, opacity: 0 }}
+                            transition={{ duration: 0.2, delay: 0.1 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="absolute justify-between top-5 flex left-0 w-full bg-opacity-50 text-white p-2">
                                 <h3 className="font-regular text-sm">
                                     {item.title}
                                 </h3>
                                 <p className="font-regular text-sm">
                                     {item.date}
                                 </p>
-                            </div>
+                            </motion.div>
                         )}
                         <img
-                            src={item.src}
-                            alt={`Placeholder ${index + 1}`}
-                            className="w-[400px] h-[90%] object-cover"
+                            src={'gingerbread.JPG'}
+                            alt={``}
+                            className="w-[400px] h-[90%] object-cover rounded-sm"
                         />
                     </div>
                 </div>

@@ -9,7 +9,7 @@ export default function TechSection() {
     const accordionItems = [
         {
             title: 'Local Reach',
-            photos: ['lif2.jpg', 'life3.jpg'],
+            photos: ['gingerbread.JPG', 'life3.jpg'],
             tags: ['TensorFlow', 'OpenCV', 'React', 'Python', 'IoT'],
             content:
                 'A computer vision startup developing lightweight AI algorithms for ad detection in commercial spaces. Achieved 96% detection accuracy using TensorFlow and OpenCV, deployed at 5 restaurants, generating over $3,000 in revenue in 5 months. Raised $60,000 in funding and participated in incubators like QYourVenture and Startup Survivor.',
@@ -63,17 +63,19 @@ export default function TechSection() {
             <div className=" relative mt-36 px-8 z-10 w-full md:absolute md:max-w-[60vw] md:right-5 md:top-1/2 md:mt-0 md:transform md:-translate-y-1/2">
                 <Accordion items={accordionItems}></Accordion>
             </div>
-            <div className=" relative max-w-lg mt-32 pr-[7%] md:absolute bottom-5 left-5">
-                <EntranceText
-                    title={'Tech'}
-                    text={
-                        'I thrive at the intersection of creativity and problem-solving, using tech to bring ideas to life. From AI algorithms to engaging frontends, my journey blends innovation, entrepreneurship, and real-world impact.'
-                    }
-                ></EntranceText>
+            <div className=" relative max-w-[25%] mt-32  md:absolute bottom-5 left-5">
+                    <EntranceText
+                        title={'Tech'}
+                        text={
+                            'I thrive at the intersection of creativity and problem-solving, using tech to bring ideas to life. From AI algorithms to engaging frontends, my journey blends innovation, entrepreneurship, and real-world impact.'
+                        }
+                    ></EntranceText>
+                    
+                
                 <GithubStats></GithubStats>
             </div>
             <div className="absolute z-10 bottom-5 right-5">
-                <SocialLink hoverScale={true} name={'Github'}></SocialLink>
+               
             </div>
         </section>
     );

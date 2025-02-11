@@ -98,12 +98,13 @@ const AccordionItem = ({
             >
                 <span className="ml-4 flex-1">
                     {link && (
-                        <a href={link}>
+                        
                             <SocialLink
+                                url={link}
                                 hoverScale={false}
                                 name={`Repository`}
                             />
-                        </a>
+                       
                     )}
                 </span>
                 <div className="font-regular py-4 pr-12 text-sm">{content}</div>
