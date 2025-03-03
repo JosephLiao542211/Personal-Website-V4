@@ -4,52 +4,52 @@ import { motion } from 'motion/react';
 const ExpandingGallery = () => {
     const images = [
         {
-            src: 'https://picsum.photos/400/600?random=1',
+            src: '/Art/File_000 (4).JPG',
             title: 'Image 1',
             date: '2023-01-01',
         },
         {
-            src: 'https://picsum.photos/400/600?random=2',
+            src: '/Art/File_005 (2).jpeg',
             title: 'Image 2',
             date: '2023-01-02',
         },
         {
-            src: 'https://picsum.photos/400/600?random=3',
+            src: '/Art/head.jpg',
             title: 'Image 3',
             date: '2023-01-03',
         },
         {
-            src: 'https://picsum.photos/400/600?random=4',
+            src: '/Art/IMG_0579.JPG',
             title: 'Image 4',
             date: '2023-01-04',
         },
         {
-            src: 'https://picsum.photos/400/600?random=5',
+            src: '/Art/File_011.jpeg',
             title: 'Image 5',
             date: '2023-01-05',
         },
         {
-            src: 'https://picsum.photos/400/600?random=6',
+            src: 'gingerbread.JPG',
             title: 'Image 6',
             date: '2023-01-06',
         },
         {
-            src: 'https://picsum.photos/400/600?random=7',
+            src: 'gingerbread.JPG',
             title: 'Image 7',
             date: '2023-01-07',
         },
         {
-            src: 'https://picsum.photos/400/600?random=8',
+            src: 'gingerbread.JPG',
             title: 'Image 8',
             date: '2023-01-08',
         },
         {
-            src: 'https://picsum.photos/400/600?random=9',
+            src: 'gingerbread.JPG',
             title: 'Image 9',
             date: '2023-01-09',
         },
         {
-            src: 'https://picsum.photos/400/600?random=10',
+            src: 'gingerbread.JPG',
             title: 'Image 10',
             date: '2023-01-10',
         },
@@ -97,7 +97,7 @@ const ExpandingGallery = () => {
                             </motion.div>
                         )}
                         <img
-                            src={'gingerbread.JPG'}
+                            src={item.src}
                             alt={``}
                             className="w-[400px] h-[90%] object-cover rounded-sm"
                         />
