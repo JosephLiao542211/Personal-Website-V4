@@ -29,12 +29,12 @@ const ExpandingGallery = () => {
             date: '2023-01-05',
         },
         {
-            src: 'gingerbread.JPG',
+            src: '/Art/monkey.jpg',
             title: 'Image 6',
             date: '2023-01-06',
         },
         {
-            src: 'gingerbread.JPG',
+            src: '/Art/IMG_0086.jpg',
             title: 'Image 7',
             date: '2023-01-07',
         },
