@@ -20,7 +20,7 @@ const ParticlesComponent = ({ options = {} }) => {
                             value: 200,
                             density: {
                                 enable: true,
-                                value_area: 500,
+                                value_area: 1000,
                             },
                         },
                         color: {
@@ -46,7 +46,7 @@ const ParticlesComponent = ({ options = {} }) => {
                         },
                         move: {
                             enable: true,
-                            speed: 6,
+                            speed: 3,
                         },
                     },
                     interactivity: {
