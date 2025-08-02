@@ -10,6 +10,7 @@ export default function EntranceText({ text, title, socialinfo }) {
     return (
         <div>
         <motion.div
+        //entrance animation
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
