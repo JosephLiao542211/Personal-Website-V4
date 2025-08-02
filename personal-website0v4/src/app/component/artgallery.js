@@ -53,6 +53,26 @@ const ExpandingGallery = () => {
             title: 'Image 10',
             date: '2023-01-10',
         },
+        {
+            src: 'gingerbread.JPG',
+            title: 'Image 10',
+            date: '2023-01-10',
+        },
+        {
+            src: 'gingerbread.JPG',
+            title: 'Image 10',
+            date: '2023-01-10',
+        },
+        {
+            src: 'gingerbread.JPG',
+            title: 'Image 10',
+            date: '2023-01-10',
+        },
+        {
+            src: 'gingerbread.JPG',
+            title: 'Image 10',
+            date: '2023-01-10',
+        },
     ];
 
     const [expandedIndex, setExpandedIndex] = useState(images.length - 1); // Start with the last image expanded
@@ -80,7 +100,7 @@ const ExpandingGallery = () => {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <div className="relative w-[400px] h-[80%] mb-5 flex items-end">
+                    <div className="relative w-[400px] h-[80%] flex items-end">
                         {expandedIndex === index && (
                             <motion.div 
                             initial={{ y: 20, opacity: 0 }}

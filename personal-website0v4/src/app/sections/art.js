@@ -3,11 +3,10 @@ import Image from 'next/image';
 import EntranceText from '../component/EntranceText';
 import ArtGallery from '../component/artgallery';
 import MobileArtGallery from '../component/mobileartgallery';
-import SocialLink from '../component/sociallink';
 
 const ArtSection = () => {
     return (
-        <section className="relative h-screen">
+        <section className="relative h-screen mx-5 my-5">
             {/* Mobile View */}
             <div className="block absolute z-10 md:hidden">
                 <p className="text-primary md:hidden text-sm font-regular text-center">
@@ -17,12 +16,22 @@ const ArtSection = () => {
             </div>
 
             {/* Computer view */}
-            <div className="absolute right-5 min-w-[800px] max-w-3xl z-10">
-                <p className="absolute left-1/2 top-[15%] text-primary hidden md:block text-sm font-regular text-center">
-                    Explore My Artwork:
-                </p>
-                <div className="hidden md:block">
-                    <ArtGallery></ArtGallery>
+            <div className='flex justify-between items-end h-screen '>
+                <div className="w-1/4">
+                    <EntranceText
+                        text="Welcome to the art section of my personal website. Feel free to explore some of my artwork! I've been involved in visual art since the age of 6, and have explored various mediums."
+                        title="Art"
+                    ></EntranceText>
+                    {/* <SocialLink hoverScale={true} name={'Github'} url={} image={'artbg.jpg'}></SocialLink> */}
+                </div>
+
+                <div className="flex-1 relative min-w-[800px] z-10">
+                    <p className=" text-primary hidden md:block text-sm font-regular text-center">
+                        Explore My Artwork:
+                    </p>
+                    <div className="hidden md:block ">
+                        <ArtGallery></ArtGallery>
+                    </div>
                 </div>
             </div>
 
@@ -38,13 +47,7 @@ const ArtSection = () => {
                 />
             </div>
 
-            <div className="absolute bottom-5 left-5 max-w-[25%]">
-                <EntranceText
-                    text="Welcome to the art section of my personal website. Feel free to explore some of my artwork! I've been involved in visual art since the age of 6, and have explored various mediums."
-                    title="Art"
-                ></EntranceText>
-                {/* <SocialLink hoverScale={true} name={'Github'} url={} image={'artbg.jpg'}></SocialLink> */}
-            </div>
+            
         </section>
     );
 };

@@ -78,23 +78,23 @@ export default function TechSection() {
         <section className="h-fit relative md:h-screen md:relative">
             
             <ParticlesComponent></ParticlesComponent>
-            <div className=" relative px-8 z-10 w-full md:absolute md:max-w-[60vw] md:right-5 md:mt-0 md:transform">
-                {/* <Accordion items={accordionItems}></Accordion> */}
-                <TechDisplay accordionItems={accordionItems}></TechDisplay> 
-            </div>
-            <div className=" relative max-w-[25%] mt-32  md:absolute bottom-5 left-5">
-                    <EntranceText
-                        title={'Tech'}
-                        text={
-                            'I thrive at the intersection of creativity and problem-solving, using tech to bring ideas to life.'
-                        }
-                    ></EntranceText>
+            <div className='flex items-end justify-between' >
+                <div className=" mx-5 w-1/4 ">
+                        <EntranceText
+                            title={'Tech'}
+                            text={
+                                'I thrive at the intersection of creativity and problem-solving, using tech to bring ideas to life.'
+                            }
+                        ></EntranceText>
+                        
                     
+                    <GithubStats></GithubStats>
+                </div>
+                <div className=" flex-1 relative px-8 z-10">
+                {/* <Accordion items={accordionItems}></Accordion> */}
+                    <TechDisplay accordionItems={accordionItems}></TechDisplay> 
+                </div>
                 
-                <GithubStats></GithubStats>
-            </div>
-            <div className="absolute z-10 bottom-5 right-5">
-               
             </div>
         </section>
     );
