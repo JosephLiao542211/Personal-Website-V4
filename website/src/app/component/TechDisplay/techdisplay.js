@@ -1,37 +1,9 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TechDisplay = ({ accordionItems }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [showTopGradient, setShowTopGradient] = useState(false);
-    const [showBottomGradient, setShowBottomGradient] = useState(true);
-    const scrollContainerRef = useRef(null);
-
-    const handleScroll = () => {
-        const container = scrollContainerRef.current;
-        if (!container) return;
-
-        const isAtTop = container.scrollTop === 0;
-        const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
-
-        setShowTopGradient(!isAtTop);
-        setShowBottomGradient(!isAtBottom);
-    };
-
-    useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (container) {
-            container.addEventListener('scroll', handleScroll);
-            // Initial check
-            handleScroll();
-        }
-        return () => {
-            if (container) {
-                container.removeEventListener('scroll', handleScroll);
-            }
-        };
-    }, []);
 
     const projects = accordionItems.map((item, index) => ({
         id: index + 1,
@@ -125,33 +97,51 @@ const TechDisplay = ({ accordionItems }) => {
             </div>
 
             {/* Side Tiles */}
-            <div className="relative w-40 h-[100%]">
-    {/* Top gradient */}
-    <div className={`absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-black via-black/50 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${showTopGradient ? 'opacity-100' : 'opacity-0'}`}></div>
-    
-    {/* Scrollable content */}
-    <div ref={scrollContainerRef} className="h-full overflow-y-auto px-4 space-y-4 py-2">
-        {projects.map((project, index) => (
-            <motion.div
-                key={project.id}
-                className={`h-32 w-32 rounded-lg cursor-pointer overflow-hidden bg-white ${
-                    activeIndex === index ? 'ring-2 ring-blue-500' : ''
-                }`}
-                whileHover={{ scale: 1.05 }}
-                onClick={() => setActiveIndex(index)}
-            >
-                <img 
-                    src={project.icon || project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                />
-            </motion.div>
-        ))}
-    </div>
-
-    {/* Bottom gradient */}
-    <div className={`absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black via-black/50 to-transparent z-10 pointer-events-none transition-opacity duration-300 ${showBottomGradient ? 'opacity-100' : 'opacity-0'}`}></div>
-</div>
+            <div className="w-[20%] h-full flex flex-col">
+                {/* Title */}
+                <h1 className="text-7xl font-regular z-10 sm:text-5xl select-none mb-8">Projects</h1>
+                
+                {/* Grid of tiles */}
+                <div className="grid grid-cols-2 gap-4 px-2">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            className={`group bg-white relative aspect-square rounded-lg cursor-pointer overflow-hidden transition-all duration-500 ease-out ${
+                                activeIndex === index 
+                                    ? 'ring-2 ring-white ring-offset-2 ring-offset-black shadow-2xl shadow-white/40' 
+                                    : 'hover:shadow-lg hover:shadow-white/15'
+                            }`}
+                            whileHover={{ 
+                                scale: 1.03,
+                                y: -2
+                            }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
+                            onClick={() => setActiveIndex(index)}
+                        >
+                            {/* Image */}
+                            <img 
+                                src={project.icon || project.image}
+                                alt={project.title}
+                                className={`w-full h-full object-cover transition-all duration-500 ease-out ${
+                                    activeIndex === index 
+                                        ? 'brightness-110 contrast-110' 
+                                        : 'brightness-75 hover:brightness-90'
+                                }`}
+                            />
+                            
+                            {/* Active indicator */}
+                            {activeIndex === index && (
+                                <motion.div 
+                                    className="absolute top-2 right-2 w-2.5 h-2.5 bg-white rounded-full shadow-lg"
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 0.3, ease: "easeOut" }}
+                                />
+                            )}
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
 
         </div>
     );

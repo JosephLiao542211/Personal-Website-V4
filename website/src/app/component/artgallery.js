@@ -88,10 +88,10 @@ const ExpandingGallery = () => {
 
     return (
         <div className="flex-col overflow-hidden w-full justify-around">
-             <p className=" text-primary hidden md:block text-sm font-regular text-center items-center">
-                            Explore My Artwork:
-            </p>
-            <div className='flex overflow-hidden w-full h-50vh justify-around'>
+             <h1 className=" text-primary hidden md:block text-5xl font-regular pl-4 pb-3  font-medium ">
+                            Explore My <br></br>Artwork:
+            </h1>
+            <div className='flex overflow-hidden w-full justify-around'>
                 {images.map((item, index) => (
                     <div
                         key={index}
@@ -104,14 +104,14 @@ const ExpandingGallery = () => {
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className="relative w-[400px] h-[80vh] flex items-end">
+                        <div className="relative w-[400px] h-[75vh] flex items-end">
                             {expandedIndex === index && (
                                 <motion.div 
                                 initial={{ y: 20, opacity: 0 }}
                                 transition={{ duration: 0.2, delay: 0.1 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
-                                className="absolute justify-between top-5 flex left-0 w-full bg-opacity-50 text-white p-2">
+                                className="absolute justify-between top-[-5px] flex left-0 w-full bg-opacity-50 text-white p-2">
                                     <h3 className="font-regular text-sm">
                                         {item.title}
                                     </h3>
@@ -123,7 +123,7 @@ const ExpandingGallery = () => {
                             <img
                                 src={item.src}
                                 alt={``}
-                                className="w-[400px] h-[90%] object-cover rounded-sm"
+                                className="w-[400px] h-[95%] object-cover rounded-sm"
                             />
                         </div>
                     </div>

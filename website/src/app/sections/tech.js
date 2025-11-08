@@ -75,11 +75,11 @@ export default function TechSection() {
     ];
 
     return (
-        <section className="h-fit relative md:h-screen md:relative p-5">
+        <section className="relative md:h-screen md:relative p-5">
             
             <ParticlesComponent></ParticlesComponent>
-            <div className='flex items-end justify-between' >
-                <div className=" mx-5 w-1/4 ">
+            <div className='flex items-end justify-between h-full' >
+                <div className=" relative w-1/4 z-10">
                         <EntranceText
                             title={'Tech'}
                             text={
@@ -88,10 +88,10 @@ export default function TechSection() {
                         ></EntranceText>
                         
                     
-                    <GithubStats></GithubStats>
+                    {/* <GithubStats></GithubStats> */}
                 </div>
-                <div className=" flex-1 relative px-8 z-10">
-                {/* <Accordion items={accordionItems}></Accordion> */}
+                <div className=" flex-1 relative z-10">
+                <Accordion items={accordionItems}></Accordion>
                     <TechDisplay accordionItems={accordionItems}></TechDisplay> 
                 </div>
                 
