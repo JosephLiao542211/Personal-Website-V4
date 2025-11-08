@@ -91,7 +91,6 @@ export default function TechSection() {
                     {/* <GithubStats></GithubStats> */}
                 </div>
                 <div className=" flex-1 relative z-10">
-                <Accordion items={accordionItems}></Accordion>
                     <TechDisplay accordionItems={accordionItems}></TechDisplay> 
                 </div>
                 
